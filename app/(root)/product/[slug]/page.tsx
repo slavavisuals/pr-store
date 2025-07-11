@@ -44,7 +44,7 @@ const ProductDetailsPage = async (props: { params: Promise<{ slug: string }> }) 
               <p>{product.description}</p>
             </div>
           </div>
-          {/* Action Column */}
+          {/* Action Columns */}
           <div>
             <Card>
               <CardContent className='p-4'>
