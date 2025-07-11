@@ -1,0 +1,98 @@
+@import 'tailwindcss';
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@theme {
+  --color-background: oklch(1 0 0); /* hsl(0 0% 100%) */
+  --color-foreground: oklch(0.14 0.0443 25.17); /* hsl(222.2 84% 4.9%) */
+  --color-card: oklch(1 0 0); /* hsl(0 0% 100%) */
+  --color-card-foreground: oklch(0.1371 0.036 258.53); /* hsl(222.2 84% 4.9%) */
+  --color-popover: oklch(100% 0 0); /* hsl(0 0% 100%) */
+  --color-popover-foreground: oklch(0.1371 0.036 258.53); /* hsl(222.2 84% 4.9%) */
+  --color-primary: oklch(0.2079 0.0399 265.73); /* hsl(222.2 47.4% 11.2%) */
+  --color-primary-foreground: oklch(0.9838 0.0035 247.86); /* hsl(210 40% 98%) */
+  --color-secondary: oklch(0.9684 0.0068 247.9); /* hsl(210 40% 96.1%) */
+  --color-secondary-foreground: oklch(0.2079 0.0399 265.73); /* hsl(222.2 47.4% 11.2%) */
+  --color-muted: oklch(0.9684 0.0068 247.9); /* hsl(210 40% 96.1%) */
+  --color-muted-foreground: oklch(0.5547 0.0407 257.44); /* hsl(215.4 16.3% 46.9%) */
+  --color-accent: oklch(0.9684 0.0068 247.9); /* hsl(210 40% 96.1%) */
+  --color-accent-foreground: oklch(0.2079 0.0399 265.73); /* hsl(222.2 47.4% 11.2%) */
+  --color-destructive: oklch(0.6368 0.2078 25.33); /* hsl(0 84.2% 60.2%) */
+  --color-destructive-foreground: oklch(0.9838 0.0035 247.86); /* hsl(210 40% 98%) */
+  --color-border: oklch(0.929 0.0126 255.53); /* hsl(214.3 31.8% 91.4%) */
+  --color-input: oklch(0.929 0.0126 255.53); /* hsl(214.3 31.8% 91.4%) */
+  --color-ring: oklch(15.08% 0.071 264.05); /* hsl(222.2 84% 4.9%) */
+  --color-chart-1: oklch(66.93% 0.177 40.01); /* hsl(12 76% 61%) */
+  --color-chart-2: oklch(49.36% 0.097 194.77); /* hsl(173 58% 39%) */
+  --color-chart-3: oklch(35.95% 0.061 239.95); /* hsl(197 37% 24%) */
+  --color-chart-4: oklch(77.84% 0.146 91.25); /* hsl(43 74% 66%) */
+  --color-chart-5: oklch(74.45% 0.196 64.25); /* hsl(27 87% 67%) */
+
+  /* Border radius */
+  --radius: 0.5rem;
+}
+
+/* Custom utility classes */
+@utility wrapper {
+  @apply w-full max-w-7xl p-5 md:px-10 lg:mx-auto;
+}
+
+@utility flex-start {
+  @apply flex items-center justify-start;
+}
+
+@utility flex-center {
+  @apply flex items-center justify-center;
+}
+
+@utility flex-between {
+  @apply flex items-center justify-between;
+}
+
+@utility h1-bold {
+  @apply text-3xl font-bold lg:text-4xl;
+}
+
+@utility h2-bold {
+  @apply text-2xl font-bold lg:text-3xl;
+}
+
+@utility h3-bold {
+  @apply text-xl font-bold lg:text-2xl;
+}
+
+/* Dark mode support */
+.dark {
+  --color-background: oklch(15.08% 0.071 264.05); /* hsl(222.2 84% 4.9%) */
+  --color-foreground: oklch(0.9838 0.0035 247.86); /* hsl(210 40% 98%) */
+  --color-card: oklch(15.08% 0.071 264.05); /* hsl(222.2 84% 4.9%) */
+  --color-card-foreground: oklch(0.9838 0.0035 247.86); /* hsl(210 40% 98%) */
+  --color-popover: oklch(15.08% 0.071 264.05); /* hsl(222.2 84% 4.9%) */
+  --color-popover-foreground: oklch(0.9838 0.0035 247.86); /* hsl(210 40% 98%) */
+  --color-primary: oklch(0.9838 0.0035 247.86); /* hsl(210 40% 98%) */
+  --color-primary-foreground: oklch(0.2079 0.0399 265.73); /* hsl(222.2 47.4% 11.2%) */
+  --color-secondary: oklch(28.17% 0.037 255.89); /* hsl(217.2 32.6% 17.5%) */
+  --color-secondary-foreground: oklch(0.9838 0.0035 247.86); /* hsl(210 40% 98%) */
+  --color-muted: oklch(28.17% 0.037 255.89); /* hsl(217.2 32.6% 17.5%) */
+  --color-muted-foreground: oklch(68.22% 0.021 253.73); /* hsl(215 20.2% 65.1%) */
+  --color-accent: oklch(28.17% 0.037 255.89); /* hsl(217.2 32.6% 17.5%) */
+  --color-accent-foreground: oklch(0.9838 0.0035 247.86); /* hsl(210 40% 98%) */
+  --color-destructive: oklch(40.21% 0.137 25.65); /* hsl(0 62.8% 30.6%) */
+  --color-destructive-foreground: oklch(0.9838 0.0035 247.86); /* hsl(210 40% 98%) */
+  --color-border: oklch(28.17% 0.037 255.89); /* hsl(217.2 32.6% 17.5%) */
+  --color-input: oklch(28.17% 0.037 255.89); /* hsl(217.2 32.6% 17.5%) */
+  --color-ring: oklch(84.63% 0.018 252.38); /* hsl(212.7 26.8% 83.9%) */
+  --color-chart-1: oklch(59.78% 0.135 264.05); /* hsl(220 70% 50%) */
+  --color-chart-2: oklch(54.25% 0.084 192.18); /* hsl(160 60% 45%) */
+  --color-chart-3: oklch(65.76% 0.154 91.69); /* hsl(30 80% 55%) */
+  --color-chart-4: oklch(68.31% 0.122 306.29); /* hsl(280 65% 60%) */
+  --color-chart-5: oklch(64.52% 0.168 0); /* hsl(340 75% 55%) */
+}

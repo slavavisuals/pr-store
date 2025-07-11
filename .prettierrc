@@ -1,0 +1,11 @@
+{
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "semi": true,
+  "tabWidth": 2,
+  "printWidth": 100,
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindStylesheet": "./assets/styles/globals.css",
+  "tailwindFunctions": ["clsx", "cn", "cva"],
+  "tailwindAttributes": ["className", "class"]
+}
