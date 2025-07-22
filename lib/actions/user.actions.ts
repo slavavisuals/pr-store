@@ -25,5 +25,6 @@ export async function signInWithCredentials(prevState: unknown, formData: FormDa
 
 // Sign the user out
 export async function signOutUser() {
-  await signOut();
+  // get current users cart and delete it so it does not persist to next user
+  await signOut({ redirectTo: '/' });
 }
