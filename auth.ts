@@ -6,6 +6,7 @@ import { compareSync } from 'bcrypt-ts';
 import type { NextAuthConfig } from 'next-auth';
 
 export const config = {
+  trustHost: true,
   pages: {
     signIn: '/sign-in',
     error: '/sign-in',
